@@ -9,8 +9,8 @@
 import UIKit
 
 public class PickerManager: NSObject {
-    public static let share = PickerManager();
-    public let cpv = CustomerPickerView();
+    static let share = PickerManager();
+    let cpv = CustomerPickerView();
     
     public func setUpPickerDataSource(items: [Any]){
         

@@ -11,7 +11,7 @@ import UIKit
 let kScreenWidth = UIScreen.main.bounds.width;
 let kScreenHeight = UIScreen.main.bounds.height;
 
-public class CustomerPickerView: UIView {
+class CustomerPickerView: UIView {
     
     var datas : [Any] = [];
     var model : Any?;
@@ -29,7 +29,7 @@ public class CustomerPickerView: UIView {
         
     }
     
-    public func show(superView: UIView,click: @escaping(Any)->()){
+    func show(superView: UIView,click: @escaping(Any)->()){
         self.frame = superView.bounds;
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4);
         superView.addSubview(self);
@@ -68,22 +68,22 @@ public class CustomerPickerView: UIView {
         selectedBlock = click;
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
 }
 
 extension CustomerPickerView: UIPickerViewDataSource{
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }
     
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return datas.count;
     }
     
-    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel();
         label.textAlignment = .center;
         label.text = datas[row] as? String;
@@ -93,7 +93,7 @@ extension CustomerPickerView: UIPickerViewDataSource{
 }
 
 extension CustomerPickerView: UIPickerViewDelegate{
-    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         model = datas[row];
     }
 }
