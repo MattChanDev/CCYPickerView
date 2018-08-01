@@ -8,16 +8,16 @@
 
 import UIKit
 
-public class PickerManager: NSObject {
+class PickerManager: NSObject {
     static let share = PickerManager();
     let cpv = CustomerPickerView();
     
-    public func setUpPickerDataSource(items: [Any]){
+    func setUpPickerDataSource(items: [Any]){
         
         cpv.datas = items;
     }
     
-    public func showPicker(data: [Any], superView: UIView,click:@escaping(Any)->()){
+    func showPicker(data: [Any], superView: UIView,click:@escaping(Any)->()){
         cpv.datas = data;
         cpv.show(superView: superView, click: click);
     }
