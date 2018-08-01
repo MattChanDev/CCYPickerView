@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PickerManager: NSObject {
+public class PickerManager: NSObject {
     static let share = PickerManager();
     let cpv = CustomerPickerView();
     

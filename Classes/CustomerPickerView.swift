@@ -11,7 +11,7 @@ import UIKit
 let kScreenWidth = UIScreen.main.bounds.width;
 let kScreenHeight = UIScreen.main.bounds.height;
 
-class CustomerPickerView: UIView {
+public class CustomerPickerView: UIView {
     
     var datas : [Any] = [];
     var model : Any?;
