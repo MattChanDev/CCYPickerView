@@ -9,15 +9,15 @@
 import UIKit
 
 public class PickerManager: NSObject {
-    static let share = PickerManager();
-    let cpv = CustomerPickerView();
+    public static let share = PickerManager();
+    public let cpv = CustomerPickerView();
     
-    func setUpPickerDataSource(items: [Any]){
+    public func setUpPickerDataSource(items: [Any]){
         
         cpv.datas = items;
     }
     
-    func showPicker(data: [Any], superView: UIView,click:@escaping(Any)->()){
+    public func showPicker(data: [Any], superView: UIView,click:@escaping(Any)->()){
         cpv.datas = data;
         cpv.show(superView: superView, click: click);
     }

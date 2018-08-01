@@ -29,8 +29,7 @@ public class CustomerPickerView: UIView {
         
     }
     
-    
-    func show(superView: UIView,click: @escaping(Any)->()){
+    public func show(superView: UIView,click: @escaping(Any)->()){
         self.frame = superView.bounds;
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4);
         superView.addSubview(self);
@@ -69,7 +68,7 @@ public class CustomerPickerView: UIView {
         selectedBlock = click;
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
