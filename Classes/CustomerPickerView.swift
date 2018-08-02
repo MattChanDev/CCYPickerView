@@ -41,11 +41,13 @@ class CustomerPickerView: UIView {
         pickerView.delegate = self;
         self.addSubview(pickerView);
         pickerView.frame = CGRect(x: 50, y: kScreenHeight * 0.5 - 100, width: kScreenWidth * 0.7, height: 200);
+        pickerView.layer.cornerRadius = 15;
         
         let pickerViewBar = UIView();
         pickerViewBar.backgroundColor = UIColor.white;
         self.addSubview(pickerViewBar);
-        pickerViewBar.frame = CGRect(x: 50, y: pickerView.frame.origin.y - 60, width: pickerView.bounds.width, height: 50);
+        pickerViewBar.frame = CGRect(x: 50, y: pickerView.frame.origin.y - 55, width: pickerView.bounds.width, height: 50);
+        pickerViewBar.layer.cornerRadius = 15;
 
         
         let button = UIButton(type: .custom);
