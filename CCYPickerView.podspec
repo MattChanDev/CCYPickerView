@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'CCYPickerView'
-    s.version      = '1.0.2'
+    s.version      = '1.0.3'
     s.summary      = 'easy way to use UIPickerView'
     s.homepage     = 'https://github.com/ChorYinChan/CCYPickerView'
     s.license      = 'MIT'
